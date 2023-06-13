@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoWeb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AutoWeb</h1>
+  <div id="carList">
+    <h2>Lista samochodów</h2>
+    <ul class="car-list">
+      <li class="car-item">
+        <img src="images/car1.jpg" alt="Samochód 1">
+        <div>
+          <p>Cena: 10000 PLN</p>
+          <p>Marka: Audi</p>
+          <p>Rok: 2018</p>
+          <p>Model: A4</p>
+          <p>Moc silnika: 150 KM</p>
+          <p>Przebieg: 50000 km</p>
+        </div>
+        <button id="configureBtn">Konfiguruj</button>
+      </li>
+      <li class="car-item">
+        <img src="images/car2.jpg" alt="Samochód 2">
+        <div>
+          <p>Cena: 20000 PLN</p>
+          <p>Marka: BMW</p>
+          <p>Rok: 2020</p>
+          <p>Model: X5</p>
+          <p>Moc silnika: 200 KM</p>
+          <p>Przebieg: 20000 km</p>
+        </div>
+        <button id="configureBtn2">Konfiguruj</button>
+      </li>
+    <li class="car-item">
+      <img src="images/car3.jpg" alt="Samochód 3">
+      <div>
+        <p>Cena: 15000 PLN</p>
+        <p>Marka: Mercedes-Benz</p>
+        <p>Rok: 2019</p>
+        <p>Model: C-Class</p>
+        <p>Moc silnika: 180 KM</p>
+        <p>Przebieg: 30000 km</p>
+      </div>
+      <button id="configureBtn3">Konfiguruj</button>
+    </li>
+        <li class="car-item">
+      <img src="images/car4.jpg" alt="Samochód 4">
+      <div>
+        <p>Cena: 12000 PLN</p>
+        <p>Marka: Volkswagen</p>
+        <p>Rok: 2017</p>
+        <p>Model: Golf</p>
+        <p>Moc silnika: 120 KM</p>
+        <p>Przebieg: 40000 km</p>
+      </div>
+      <button id="configureBtn4">Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car5.jpg" alt="Samochód 5">
+      <div>
+        <p>Cena: 18000 PLN</p>
+        <p>Marka: Toyota</p>
+        <p>Rok: 2021</p>
+        <p>Model: Corolla</p>
+        <p>Moc silnika: 150 KM</p>
+        <p>Przebieg: 10000 km</p>
+      </div>
+      <button id="configureBtn5">Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car6.jpg" alt="Samochód 6">
+      <div>
+        <p>Cena: 25000 PLN</p>
+        <p>Marka: Ford</p>
+        <p>Rok: 2019</p>
+        <p>Model: Focus</p>
+        <p>Moc silnika: 125 KM</p>
+        <p>Przebieg: 35000 km</p>
+      </div>
+      <button id="configureBtn6">Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car7.jpg" alt="Samochód 7">
+      <div>
+        <p>Cena: 22000 PLN</p>
+        <p>Marka: Volvo</p>
+        <p>Rok: 2020</p>
+        <p>Model: XC60</p>
+        <p>Moc silnika: 190 KM</p>
+        <p>Przebieg: 25000 km</p>
+      </div>
+      <button id="configureBtn7">Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car8.jpg" alt="Samochód 8">
+      <div>
+        <p>Cena: 13000 PLN</p>
+        <p>Marka: Opel</p>
+        <p>Rok: 2016</p>
+        <p>Model: Astra</p>
+        <p>Moc silnika: 110 KM</p>
+        <p>Przebieg: 45000 km</p>
+      </div>
+      <button id="configureBtn8" >Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car9.jpg" alt="Samochód 9">
+      <div>
+        <p>Cena: 19000 PLN</p>
+        <p>Marka: Honda</p>
+        <p>Rok: 2020</p>
+        <p>Model: Civic</p>
+        <p>Moc silnika: 160 KM</p>
+        <p>Przebieg: 15000 km</p>
+      </div>
+      <button id="configureBtn9" >Konfiguruj</button>
+    </li>
+    <li class="car-item">
+      <img src="images/car10.jpg" alt="Samochód 10">
+      <div>
+        <p>Cena: 14000 PLN</p>
+        <p>Marka: Peugeot</p>
+        <p>Rok: 2017</p>
+        <p>Model: 308</p>
+        <p>Moc silnika: 130 KM</p>
+        <p>Przebieg: 40000 km</p>
+      </div>
+      <button id="configureBtn10" >Konfiguruj</button>
+    </li>
+    </ul>
+  </div>
+  <div id="configForm" class="config-form">
+    <h2>Formularz konfiguracji</h2>
+    <form id="purchaseForm" onsubmit="event.preventDefault(); validateForm();">
+      <label for="financing">Wybierz finansowanie:</label>
+      <div>
+        <input type="radio" id="leasing" name="financing" value="leasing">
+        <label for="leasing">Leasing</label>
+      </div>
+      <div>
+        <input type="radio" id="cash" name="financing" value="gotówka">
+        <label for="cash">Gotówka</label>
+      </div>
+      <label for="ownerName">Imię i nazwisko:</label>
+      <input type="text" id="ownerName" name="ownerName">
+      <label for="deliveryDate">Data dostawy:</label>
+      <select id="deliveryDate" name="deliveryDate"></select>
+      <label for="accessories">Wybierz akcesoria:</label>
+      <ul class="accessories-list">
+        <li class="accessory-item">
+          <span>Alkomat</span>
+          <span>Cena: 100 PLN</span>
+          <input type="checkbox" name="accessories" value="1">
+        </li>
+        <li class="accessory-item">
+          <span>Zestaw głośnomówiący</span>
+          <span>Cena: 200 PLN</span>
+          <input type="checkbox" name="accessories" value="2">
+        </li>
+      </ul>
+      <button type="submit">Zakup</button>
+      <button type="button" onclick="goBack()">Powrót do wyboru</button>
+      <div id="errorContainer"></div>
+    </form>
+  </div>
+  <div id="summary">
+    <h2>Podsumowanie zakupu</h2>
+    <p>Dziękujemy za zakup auta!</p>
+    <p>Metoda płatności: <span id="paymentMethod"></span></p>
+    <img id="carImage" src="" alt="Zakupione auto">
+    <p id="totalPrice"></p>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
